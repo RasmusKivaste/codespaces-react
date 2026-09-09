@@ -1,14 +1,39 @@
-import './App.css';
-import ExpenseItem from './components/ExpenseItem';
+import React from 'react';
+import Expenses from './components/Expenses';
 
-const App = () => {
-    return (
-        <div className="App">
-            <ExpenseItem />
+function App() {
+  const expenses = [
+    {
+      id: 'e1',
+      title: 'Tualettpaber',
+      amount: 94.12,
+      date: new Date(2020, 7, 14),
+    },
+    {
+      id: 'e2',
+      title: 'Uus teler',
+      amount: 799.49,
+      date: new Date(2021, 2, 12),
+    },
+    {
+      id: 'e3',
+      title: 'Autokindlustus',
+      amount: 294.67,
+      date: new Date(2021, 2, 28),
+    },
+    {
+      id: 'e4',
+      title: 'Uus laud (puidust)',
+      amount: 450,
+      date: new Date(2021, 5, 12),
+    },
+  ];
 
-            </div>
-    );
+  return (
+    <div>
+      <Expenses items={expenses} />
+    </div>
+  );
 }
 
 export default App;
-
